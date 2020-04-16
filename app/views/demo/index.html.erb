@@ -1,8 +1,8 @@
 <h1>Main Demo Page</h1>
-<%= link_to 'Hello Page 2', {:action => 'hello'} %>
-<br />
 
-<%= link_to 'Hello with params', {:action => 'hello', :page => 5, :id => 20} %>
-
-<br />
+<h2>Subjects</h2>
+<% @subjects.each do |subject| %>
+    <%= link_to subject.name , subject_path(subject) %><br />
+<% end %>
+<h2>All Subjects</h2>
 <%= link_to 'All Subjects', subjects_path %>

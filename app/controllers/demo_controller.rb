@@ -1,5 +1,6 @@
 class DemoController < ApplicationController
   def index
+    @subjects = Subject.all
   end
 
   def hello
