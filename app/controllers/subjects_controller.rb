@@ -1,7 +1,7 @@
 class SubjectsController < ApplicationController
   def index
     @subjects = Subject.order('position ASC')
-    
+
   end
 
   def show
@@ -10,6 +10,7 @@ class SubjectsController < ApplicationController
   end
 
   def new
+    @subject = Subject.new
   end
 
   def create
